@@ -1,0 +1,36 @@
+{
+  "name": "retyst",
+  "version": "1.0.0",
+  "description": "A react typescript starter.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build:dev": "webpack --mode development",
+    "build:prod": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartw/retyst.git"
+  },
+  "author": "Bart Wijnants",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bartw/retyst/issues"
+  },
+  "homepage": "https://github.com/bartw/retyst#readme",
+  "devDependencies": {
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "html-webpack-plugin": "^3.2.0",
+    "ts-loader": "^5.1.1",
+    "typescript": "^3.0.3",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "styled-components": "^3.4.9"
+  }
+}
