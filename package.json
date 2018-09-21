@@ -1,7 +1,7 @@
 {
   "name": "retyst",
   "version": "1.0.0",
-  "description": "A react typescript starter.",
+  "description": "A react typescript starter",
   "main": "index.tsx",
   "scripts": {
     "detach": "node detach.js",

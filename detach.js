@@ -30,6 +30,22 @@ const deleteFolder = path => {
   console.log("deleted " + path);
 };
 
+const cleanFile = (path, clean) => {
+  console.log("cleaning " + path);
+  fs.readFile(path, "utf8", (err, data) => {
+    if (err) {
+      return console.log(err);
+    }
+
+    fs.writeFile(path, clean(data), "utf8", err => {
+      if (err) {
+        return console.log(err);
+      }
+      console.log("cleaned " + path);
+    });
+  });
+};
+
 deleteFolder("./.git");
 deleteFolder("./node_modules");
 deleteFolder("./dist");
@@ -38,25 +54,25 @@ deleteFile("./LICENSE");
 deleteFile("./detach.js");
 deleteFile("./package-lock.json");
 
-const package = "./package.json";
-console.log("cleaning " + package);
-fs.readFile(package, "utf8", (err, data) => {
-  if (err) {
-    return console.log(err);
-  }
-
-  const clean = data
+cleanFile("./package.json", data =>
+  data
     .replace(/retyst/g, "yourRepoHere")
-    .replace(/A react typescript starter./g, "")
+    .replace(/A react typescript starter/g, "")
     .replace(/bartw/g, "yourUserNameHere")
     .replace(/Bart Wijnants/g, "yourNameHere")
     .replace(/MIT/g, "")
-    .replace(/"detach": "node detach.js",/g, "");
+    .replace(/"detach": "node detach.js",/g, "")
+);
 
-  fs.writeFile(package, clean, "utf8", err => {
-    if (err) {
-      return console.log(err);
-    }
-    console.log("cleaned " + package);
-  });
-});
+cleanFile("./src/index.html", data =>
+  data
+    .replace(/Retyst/g, "yourTitleHere")
+    .replace(/A react typescript starter/g, "")
+    .replace(/Bart Wijnants/g, "yourNameHere")
+);
+
+cleanFile("./src/App.tsx", data =>
+  data
+    .replace(/Retyst/g, "yourTitleHere")
+    .replace(/A react typescript starter/g, "")
+);
