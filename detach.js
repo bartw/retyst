@@ -1,10 +1,12 @@
 const fs = require("fs");
 
 const deleteFile = path => {
+  console.log("deleting " + path);
   if (!fs.existsSync(path)) {
     return;
   }
   fs.unlinkSync(path);
+  console.log("deleted " + path);
 };
 
 const deleteFolderRecursive = path => {
@@ -22,15 +24,22 @@ const deleteFolderRecursive = path => {
   fs.rmdirSync(path);
 };
 
-deleteFolderRecursive("./.git");
-deleteFolderRecursive("./node_modules");
-deleteFolderRecursive("./dist");
+const deleteFolder = path => {
+  console.log("deleting " + path);
+  deleteFolderRecursive(path);
+  console.log("deleted " + path);
+};
+
+deleteFolder("./.git");
+deleteFolder("./node_modules");
+deleteFolder("./dist");
 deleteFile("./README.md");
 deleteFile("./LICENSE");
 deleteFile("./detach.js");
 deleteFile("./package.lock.json");
 
 const package = "./package.json";
+console.log("cleaning " + package);
 fs.readFile(package, "utf8", (err, data) => {
   if (err) {
     return console.log(err);
@@ -48,5 +57,6 @@ fs.readFile(package, "utf8", (err, data) => {
     if (err) {
       return console.log(err);
     }
+    console.log("cleaned " + package);
   });
 });
