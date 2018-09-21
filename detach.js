@@ -36,7 +36,7 @@ deleteFolder("./dist");
 deleteFile("./README.md");
 deleteFile("./LICENSE");
 deleteFile("./detach.js");
-deleteFile("./package.lock.json");
+deleteFile("./package-lock.json");
 
 const package = "./package.json";
 console.log("cleaning " + package);
