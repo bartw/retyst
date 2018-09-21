@@ -2,8 +2,9 @@
   "name": "retyst",
   "version": "1.0.0",
   "description": "A react typescript starter.",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
+    "detach": "node detach.js",
     "start": "webpack-dev-server --mode development",
     "build:dev": "webpack --mode development",
     "build:prod": "webpack --mode production"
