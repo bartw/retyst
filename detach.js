@@ -57,7 +57,7 @@ deleteFile("./package-lock.json");
 cleanFile("./package.json", data =>
   data
     .replace(/retyst/g, "yourRepoHere")
-    .replace(/A react typescript starter/g, "")
+    .replace(/A React Typescript Starter/g, "")
     .replace(/bartw/g, "yourUserNameHere")
     .replace(/Bart Wijnants/g, "yourNameHere")
     .replace(/MIT/g, "")
@@ -67,12 +67,12 @@ cleanFile("./package.json", data =>
 cleanFile("./src/index.html", data =>
   data
     .replace(/Retyst/g, "yourTitleHere")
-    .replace(/A react typescript starter/g, "")
+    .replace(/A React Typescript Starter/g, "")
     .replace(/Bart Wijnants/g, "yourNameHere")
 );
 
 cleanFile("./src/App.tsx", data =>
   data
     .replace(/Retyst/g, "yourTitleHere")
-    .replace(/A react typescript starter/g, "")
+    .replace(/A React Typescript Starter/g, "")
 );

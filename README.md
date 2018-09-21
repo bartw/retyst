@@ -1,6 +1,6 @@
 # retyst
 
-A react typescript starter.
+A React Typescript Starter.
 
 ## scripts
 
