@@ -20,7 +20,7 @@ The dev dependencies include Typescript and Webpack with ts-loader, html-webpack
 
 The dependencies are react, react-dom and styles-components.
 
-I will try to keep this up to date whenever I use it (and that might be never).
+I will try to keep this repo up to date whenever I use it (and that might be never).
 
 ## usage
 
