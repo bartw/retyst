@@ -28,7 +28,7 @@ You can test this repo by executing `npm install` followed by `npm start` and th
 
 You can use the `npm run build:dev` and `npm run build:prod` to check out the generated bundles.
 
-The `npm run detach` script removes all connections to retyst and the github repo so you can start your own project.
+The `npm run detach` script removes all connections to retyst and the .git folder so you can start your own project.
 
 ## license
 
